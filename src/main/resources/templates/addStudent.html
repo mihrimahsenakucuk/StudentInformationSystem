@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Add Student</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../static/style.css" th:href="@{/style.css}" />
+</head>
+<body>
+<h1>Add a new Student</h1>
+<form class="form-style" action="#" th:action="@{/add}" th:object="${student}">
+    <label>Name:</label>
+    <input type="text" th:field="*{name}" required>
+    <br>
+    <br>
+    <label>Student id</label>
+    <input type="text" th:field="*{id}" required>
+    <br>
+    <br>
+    <label>Student name</label>
+    <input type="text" th:field="*{fullName}" required>
+    <br>
+    <br>
+    <label>Number</label>
+    <input type="number" min="0" max="100" step="0.01" th:field="*{number}" required>
+    <br>
+    <br>
+    <label>Email</label>
+    <input type="number" min="0" max="100" step="0.01" th:field="*{email}" required>
+    <br>
+    <br>
+    <label>Gsm Number</label>
+    <input type="number" min="0" max="100" step="0.01" th:field="*{gsmNumber}" required>
+    <br>
+    <br>
+    <input type="submit" value="Add Student">
+</form>
+<br>
+<a href="/" th:href="@{/}">Go back to Home page</a>
+</body>
+</html>
